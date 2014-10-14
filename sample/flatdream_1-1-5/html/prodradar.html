@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/icon.png">
+
+    <title>Techhack</title>
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700,800' rel='stylesheet'-->
+    <!--type='text/css'>-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Raleway:300,200,100' rel='stylesheet' type='text/css'>-->
+
+    <!-- Bootstrap core CSS -->
+    <link href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/jquery.gritter/css/jquery.gritter.css"/>
+    <link rel="stylesheet" href="fonts/font-awesome-4/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/html5shiv.js"></script>
+    <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="js/jquery.nanoscroller/nanoscroller.css"/>
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="https://cn.avoscloud.com/scripts/lib/av-0.4.4.min.js"></script>
+
+    <script src="http://www.page2images.com/js/p2i.js"></script>
+
+</head>
+<body class="animated" ng-app="drillerApp">
+
+<div id="cl-wrapper">
+
+    <div class="cl-sidebar">
+        <div class="cl-toggle"><i class="fa fa-bars"></i></div>
+        <div class="cl-navblock">
+            <div class="menu-space">
+                <div class="content">
+                    <div class="sidebar-logo">
+                        <div class="logo">
+                            <a href="index2.html"></a>
+                        </div>
+                    </div>
+                    <div class="side-user">
+                        <div class="avatar"><img src="images/avatar6.jpg" alt="Avatar"/></div>
+                    </div>
+                    <ul class="cl-vnavigation">
+                        <li><a href="#"><i class="fa fa-home"></i><span>Product Driller</span></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-desktop"></i><span>Armory</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-right collapse-button" style="padding:7px 9px;">
+                <input type="text" class="form-control search" placeholder="Search..."/>
+                <button id="sidebar-collapse" class="btn btn-default" style=""><i style="color:#fff;"
+                                                                                  class="fa fa-angle-left"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="pcont">
+        <!-- TOP NAVBAR -->
+        <div id="head-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right user-nav">
+                        <li class="dropdown profile_menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img alt="Avatar"
+                                                                                            src="images/avatar6-2.jpg"/><span>Jane Smith</span>
+                                <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Messages</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Sign Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav not-nav">
+                        <li class="button dropdown">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i
+                                    class=" fa fa-inbox"></i></a>
+                            <ul class="dropdown-menu messages">
+                                <li>
+                                    <div class="nano nscroller">
+                                        <div class="content">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="images/avatar2.jpg" alt="avatar"/><span
+                                                            class="date pull-right">13 Sept.</span> <span class="name">Daniel</span>
+                                                        Hey! How are you?
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="images/avatar_50.jpg" alt="avatar"/><span
+                                                            class="date pull-right">20 Oct.</span><span
+                                                            class="name">Adam</span>
+                                                        Hi! Can you fix my phone?
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="images/avatar4_50.jpg" alt="avatar"/><span
+                                                            class="date pull-right">2 Nov.</span><span
+                                                            class="name">Michael</span>
+                                                        Regards!
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="images/avatar3_50.jpg" alt="avatar"/><span
+                                                            class="date pull-right">2 Nov.</span><span
+                                                            class="name">Lucy</span> Hello, my name is Lucy
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="foot">
+                                        <li><a href="#">View all messages </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="button dropdown">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i
+                                    class="fa fa-globe"></i><span class="bubble">2</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="nano nscroller">
+                                        <div class="content">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-cloud-upload info"></i><b>Daniel</b> is
+                                                    now following you <span class="date">2 minutes ago.</span></a></li>
+                                                <li><a href="#"><i class="fa fa-male success"></i> <b>Michael</b>
+                                                    commented on your link <span class="date">15 minutes ago.</span></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-bug warning"></i> <b>Mia</b> commented
+                                                    on post <span class="date">30 minutes ago.</span></a></li>
+                                                <li><a href="#"><i class="fa fa-credit-card danger"></i> <b>Andrew</b>
+                                                    sent you a request <span class="date">1 hour ago.</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="foot">
+                                        <li><a href="#">View all activity </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="button"><a class="toggle-menu menu-right push-body" href="javascript:;"
+                                              class="speech-button"><i class="fa fa-comments"></i></a></li>
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse animate-collapse -->
+            </div>
+        </div>
+
+
+        <div class="cl-mcont" ng-controller="ProdListController">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="fd-tile detail clean tile-purple">
+                        <div class="content"><h1 class="text-left">1413</h1>
+
+                            <p>Product</p></div>
+                        <div class="icon"><i class="fa fa-flag"></i></div>
+                        <a class="details" href="#">Details <span><i
+                                class="fa fa-arrow-circle-right pull-right"></i></span></a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="fd-tile detail clean tile-green">
+                        <div class="content"><h1 class="text-left">7</h1>
+
+                            <p>Data Source</p></div>
+                        <div class="icon"><i class="fa fa-comments"></i></div>
+                        <a class="details" href="#">Details <span><i
+                                class="fa fa-arrow-circle-right pull-right"></i></span></a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="fd-tile detail clean tile-prusia">
+                        <div class="content"><h1 class="text-left">5652</h1>
+
+                            <p>Product snapshot</p></div>
+                        <div class="icon"><i class="fa fa-heart"></i></div>
+                        <a class="details" href="#">Details <span><i
+                                class="fa fa-arrow-circle-right pull-right"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="fd-tile detail clean tile-red">
+                        <div class="content"><h1 class="text-left">0</h1>
+
+                            <p>Product watched</p></div>
+                        <div class="icon"><i class="fa fa-eye"></i></div>
+                        <a class="details" href="#">Details <span><i
+                                class="fa fa-arrow-circle-right pull-right"></i></span></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12"
+                     ng-repeat="product in products">
+                    <div class="block-flat">
+                        <div class="header">
+                            <h3>{{product.name}}</h3>
+                        </div>
+                        <div class="content" style="height:60px;overflow: auto">
+                            {{product.description}}
+                        </div>
+                        <hr>
+                        <div class="counter">
+                            <p>TH rank</p><h5>{{product.techrank}}</h5>
+                        </div>
+                        <a class="image-zoom" ng-src="product.screenshot">
+                            <img id="screenshot_{{product.id}}" src="{{product.screenshot}}" class="img-thumbnail"
+                                 style="height:300px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Right Chat-->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right side-chat">
+    <div class="header">
+        <h3>Chat</h3>
+    </div>
+    <div class="sub-header" href="#">
+        <div class="icon"><i class="fa fa-user"></i></div>
+        <p>Online (4)</p>
+    </div>
+    <div class="content">
+        <p class="title">Family</p>
+        <ul class="nav nav-pills nav-stacked contacts">
+            <li class="online"><a href="#"><i class="fa fa-circle-o"></i> Michael Smith</a></li>
+            <li class="online"><a href="#"><i class="fa fa-circle-o"></i> John Doe</a></li>
+            <li class="online"><a href="#"><i class="fa fa-circle-o"></i> Richard Avedon</a></li>
+            <li class="busy"><a href="#"><i class="fa fa-circle-o"></i> Allen Collins</a></li>
+        </ul>
+
+        <p class="title">Friends</p>
+        <ul class="nav nav-pills nav-stacked contacts">
+            <li class="online"><a href="#"><i class="fa fa-circle-o"></i> Jaime Garzon</a></li>
+            <li class="outside"><a href="#"><i class="fa fa-circle-o"></i> Dave Grohl</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Victor Jara</a></li>
+        </ul>
+
+        <p class="title">Work</p>
+        <ul class="nav nav-pills nav-stacked contacts">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Ansel Adams</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Gustavo Cerati</a></li>
+        </ul>
+
+    </div>
+    <div id="chat-box">
+        <div class="header">
+            <span>Richard Avedon</span>
+            <a class="close"><i class="fa fa-times"></i></a>
+        </div>
+        <div class="messages nano nscroller">
+            <div class="content">
+                <ul class="conversation">
+                    <li class="odd">
+                        <p>Hi Jane, how are you?</p>
+                    </li>
+                    <li class="text-right">
+                        <p>Hello I was looking for you</p>
+                    </li>
+                    <li class="odd">
+                        <p>Tell me what you need?</p>
+                    </li>
+                    <li class="text-right">
+                        <p>Sorry, I'm late... see you</p>
+                    </li>
+                    <li class="odd unread">
+                        <p>OK, call me later...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="chat-input">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter a message...">
+        <span class="input-group-btn">
+        <button type="button" class="btn btn-primary">Send</button>
+        </span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cookie/jquery.cookie.js"></script>
+<script src="js/jquery.pushmenu/js/jPushMenu.js"></script>
+<script type="text/javascript" src="js/jquery.nanoscroller/jquery.nanoscroller.js"></script>
+<script type="text/javascript" src="js/jquery.sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.gritter/js/jquery.gritter.js"></script>
+<script type="text/javascript" src="js/behaviour/core.js"></script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="js/angular/angular.min.js"></script>
+<script src="js/proddriller.js"></script>
+
+<script type="text/javascript" src="js/jquery.flot/jquery.flot.js"></script>
+<script type="text/javascript" src="js/jquery.flot/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="js/jquery.flot/jquery.flot.resize.js"></script>
+<script type="text/javascript" src="js/jquery.flot/jquery.flot.labels.js"></script>
+</body>
+</html>
